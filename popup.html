@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Extension Popup</title>
+    <style>
+        body {
+            width: 275px;
+            padding: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .header {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header img {
+            height: 40px;
+        }
+        .header h1 {
+            font-size: 20px;
+            margin: 0;
+            flex-grow: 1;
+            text-align: left;
+            padding-left: 10px;
+        }
+        .status-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: #eaeaea;
+            border-radius: 8px;
+            padding: 10px;
+        }
+        #status {
+            font-size: 14px;
+            font-weight: bold;
+            margin-right: 5px;
+            color: #0078d4;
+        }
+        #statusMessage {
+            font-size: 14px;
+            font-weight: normal;
+            color: #666;
+        }
+        button {
+            width: calc(100% - 20px);
+            padding: 10px 15px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #0078d4;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056a3;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="/images/logo500.png" alt="Logo">
+        <h1>YouTube Ad Replacer</h1>
+    </div>
+
+    <div class="status-container">
+        <div id="status">Status:</div>
+        <div id="statusMessage">Checking status...</div>
+    </div>
+
+    <button id="deactivateButton">Deactivate Manually</button>
+
+    <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Ad Blocker",
+  "version": "1.1",
+  "description": "Blocks ads on youtube by displaying the embedded version of the video",
+  "permissions": ["tabs", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js", "popup.js"]
+    }
+  ],
+  "icons": {
+    "16": "images/logo16.png",
+    "48": "images/logo48.png",
+    "128": "images/logo128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "images/logo16.png",
+        "images/logo48.png",
+        "images/logo128.png",
+        "images/logo500.png"
+      ],
+      "matches": ["https://www.youtube.com/*"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
